@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<!-- ======= ======= ======= head ======= ======= ======= -->
+<head>
+    <meta charset="utf-8">
+    <title>Jukebox!</title>
+
+<!-- == styles == -->
+    <link rel="stylesheet" type="text/css" href="Jukebox.css">
+</head>
+
+<!-- ======= ======= ======= body ======= ======= ======= -->
+<body>
+	<h1 align="center"><b> MIKE'S JUKEBOX </b></h1>
+
+<div id="musicstuff">REQUESTED SONG INFO:
+	<p class="musicinfo" id="song1">&nbsp;</p>
+	<p class="musicinfo" id="song2">&nbsp;</p>
+	<p class="musicinfo" id="song3">&nbsp;</p>
+	<p class="musicinfo" id="song4">&nbsp;</p>
+</div>
+
+<img class="jukepic" src="https://s-media-cache-ak0.pinimg.com/736x/9d/93/28/9d9328aa331018a21ca1003014c8463b.jpg">
+
+<ul id="songtitles">SONG LIST (click what you want to hear):<br> </br></ul>
+
+<div id="jukePlayer">
+	<input type="image" id="audiofile" size="300" value="The Message.mp3"/>
+	<p>"The Message" by Nas. Like this song? If so, press play! If not, just move on. NEXT!! Or, you know, add a new song if you'd like! It's up to you -- the choice is yours!</p>
+	<audio id="audio">
+		<source id="songmp3" source src="The Message.mp3" type="audio/mpeg" />
+	</audio>
+
+	<label for="title">Title</label>
+	<input type="text" id="titleinput" name="title">
+	<br>
+	<br>
+
+	<label for="artist">Artist</label>
+	<input type="text" id="artistinput" name="artist">
+	<br>
+	<br>
+
+	<label for="url">URL</label>
+	<input type="text" id="urlinput" name="url">
+	<br>
+	<br>
+
+	<input type="button" id="saveButton" value="Save">
+
+</div>
+
+
+<button id="pbutton" class="play"
+	onclick="myJukebox.playAudio()">
+	PLAY
+</button>
+
+<button id="pbutton2" class="pause" onclick="myJukebox.pauseAudio()">
+	PAUSE
+</button>
+
+<button id="pbutton3" class="next" onclick="myJukebox.nextURL()">
+	NEXT
+</button>
+
+<button id="pbutton4" class="next" onclick="myJukebox.shuffleAudio()">
+	SHUFFLE
+</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="Jukebox.js"></script>
+
+	</body>
+</html>
